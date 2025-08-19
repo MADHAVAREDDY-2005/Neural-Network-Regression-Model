@@ -119,7 +119,7 @@ Plot the performance plot
 Evaluate the model with the testing data.
 
 ## PROGRAM
-### Name: K MADHAVA REDDY
+### Developed By: K MADHAVA REDDY
 ### Register Number: 212223240064
 ```python
 class NeuralNet(nn.Module):
@@ -155,22 +155,6 @@ def train_model(my_model, X_train, y_train, criterion, optimizer, epochs=2000):
 
 train_model(my_model, X_train_tensor, y_train_tensor, criterion, optimizer)
 
-with torch.no_grad():
-    test_loss = criterion(my_model(X_test_tensor), y_test_tensor)
-    print(f'Test Loss: {test_loss.item():.6f}')
-
-loss_df = pd.DataFrame(my_model.history)
-
-import matplotlib.pyplot as plt
-loss_df.plot()
-plt.xlabel("Epochs")
-plt.ylabel("Loss")
-plt.title("Loss during Training")
-plt.show()
-
-X_n1_1 = torch.tensor([[20]], dtype=torch.float32)
-prediction = my_model(torch.tensor(scaler.transform(X_n1_1), dtype=torch.float32)).item()
-print(f'Prediction: {prediction}')
 ```
 ## Dataset Information
 <img width="722" height="867" alt="image" src="https://github.com/user-attachments/assets/c7714b0b-52ed-4a42-a73c-b037b54e7609" />
