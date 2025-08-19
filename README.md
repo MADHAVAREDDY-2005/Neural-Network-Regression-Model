@@ -65,40 +65,14 @@ Neural networks are universal function approximators, meaning they can model com
 Linear Layers (nn.Linear) perform weighted sums of inputs plus a bias.
 
 Mathematically:
-
-𝑦
-=
-𝑊
-𝑥
-+
-𝑏
 y=Wx+b
 
 where 
-𝑊
 W is the weight matrix, 
-𝑥
 x is input, and 
-𝑏
 b is bias.
 
 ReLU Activation introduces non-linearity:
-
-𝑅
-𝑒
-𝐿
-𝑈
-(
-𝑥
-)
-=
-max
-⁡
-(
-0
-,
-𝑥
-)
 ReLU(x)=max(0,x)
 
 Backpropagation & Gradient Descent:
