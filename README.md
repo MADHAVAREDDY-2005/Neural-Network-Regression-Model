@@ -10,8 +10,8 @@ To develop a neural network regression model for the given dataset.
 
 We want to build a regression model using a feedforward neural network. The task is to learn the mapping between input features and continuous target values. Unlike classification problems (where outputs are discrete classes), regression problems aim to predict real-valued outcomes, such as prices, measurements, or any other numerical data.
 
-Neural Network Model Explanation
-1. Architecture
+##### Neural Network Model Explanation
+#### 1. Architecture
 
 The model is a fully connected feedforward neural network implemented in PyTorch. It consists of:
 
@@ -25,12 +25,12 @@ Hidden Layer 3 (20 neurons) → fully connected layer with ReLU activation.
 
 Output Layer (1 neuron) → produces the final prediction (continuous value).
 
-The flow of data is:
+#### The flow of data is:
 
 Input → Linear(1→6) → ReLU → Linear(6→12) → ReLU 
       → Linear(12→20) → ReLU → Linear(20→1) → Output
 
-2. Activation Function
+#### 2. Activation Function
 
 ReLU (Rectified Linear Unit) is used in the hidden layers.
 
@@ -38,7 +38,7 @@ ReLU introduces non-linearity, helping the network learn complex patterns.
 
 It avoids issues like the vanishing gradient problem that can occur with sigmoid/tanh.
 
-3. Loss Function
+#### 3. Loss Function
 
 Mean Squared Error (MSELoss) is used.
 
@@ -46,7 +46,7 @@ MSE is the standard loss for regression problems.
 
 It penalizes larger errors more strongly, encouraging the model to minimize prediction errors.
 
-4. Optimizer
+#### 4. Optimizer
 
 RMSprop (Root Mean Square Propagation) is chosen as the optimizer.
 
@@ -54,7 +54,7 @@ RMSprop adapts the learning rate for each parameter individually, which makes it
 
 It is widely used for training deep neural networks when data is noisy or gradients fluctuate.
 
-5. Training History
+#### 5. Training History
 
 The model also keeps track of training loss values in self.history['loss'], which can be useful for visualization and analysis after training.
 
@@ -64,7 +64,7 @@ Neural networks are universal function approximators, meaning they can model com
 
 Linear Layers (nn.Linear) perform weighted sums of inputs plus a bias.
 
-Mathematically:
+Mathematically: 
 y=Wx+b
 
 where 
@@ -72,10 +72,10 @@ W is the weight matrix,
 x is input, and 
 b is bias.
 
-ReLU Activation introduces non-linearity:
+##### ReLU Activation introduces non-linearity:
 ReLU(x)=max(0,x)
 
-Backpropagation & Gradient Descent:
+##### Backpropagation & Gradient Descent:
 
 The model learns by minimizing the loss function.
 
